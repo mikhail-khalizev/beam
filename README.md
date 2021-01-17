@@ -6,7 +6,6 @@
 * Difficulty.TestDifficulty
 
 Source code based on https://github.com/BeamMW/beam.
-
 See also [beamHash_III_spec.pdf](https://docs.beam.mw/beamHash_III_spec.pdf).
 
 2\. Provides Beam Wallet database model.

@@ -246,7 +246,7 @@ namespace Beam
         {
             var inStream = new BigInteger(); // 100 bytes
 
-            for (var i = indexes.Count; 0 <= i; i--)
+            for (var i = indexes.Count - 1; 0 <= i; i--)
             {
                 inStream <<= (CollisionBitSize + 1);
                 inStream |= (ulong) indexes[i];
@@ -326,7 +326,7 @@ namespace Beam
 
                 var temp = new StepElem(elements[i], elements[j], remLen);
                 if (!temp.IsZero())
-                    continue; // Is it possible?
+                    continue;
 
                 var sol = GetMinimalFromIndices(temp.IndexTree);
 

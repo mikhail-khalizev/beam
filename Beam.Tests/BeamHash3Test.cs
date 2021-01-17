@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using FluentAssertions;
 using Xunit;
 
@@ -62,12 +63,17 @@ namespace Beam.Tests
 
             var result = BeamHash3.Solve(_input, _nonce, x =>
             {
+                BeamHash3.IsValidSolution(_input, _nonce, x).Should().BeTrue();
+
                 if (!Difficulty.TestDifficulty(x, _difficulty))
                     return false;
                 
                 solution = x;
                 return true;
             });
+
+            result.Should().BeTrue();
+            solution.SequenceEqual(_solution).Should().BeTrue();
         }
     }
 }
