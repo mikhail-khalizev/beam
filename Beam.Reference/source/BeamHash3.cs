@@ -23,7 +23,7 @@ namespace Beam
 
             public StepElem(byte[] preWork, int index)
             {
-                for (var i = 6; i >= 0; i--)
+                for (var i = 6; 0 <= i; i--)
                 {
                     _workBits = _workBits << 64;
                     var hash = SipHash.Siphash24(
@@ -89,13 +89,13 @@ namespace Beam
 
                 // Apply in the mix from the lined up bits
                 // var mask = new BigInteger(); // 512 bits.
-                var mask = 0xFFFFFFFF_FFFFFFFFUL;
+                var mask = 0xFFFFFFFF_FFFFFFFFUL; // 64 bits.
                 ulong result = 0;
                 for (var i = 0; i < 8; i++)
                 {
                     var tmp = (ulong) (tempBits & mask);
                     tempBits >>= 64;
-                    result += SipHash.Rotl(tmp, (29 * (i + 1)) & 0x3F);
+                    result += SipHash.Rotl(tmp, (29 * (i + 1)) & 0x3F /* 63 */);
                 }
 
                 result = SipHash.Rotl(result, 24);
@@ -141,7 +141,7 @@ namespace Beam
 
             var round = 1;
 
-            while (x.Count > 1)
+            while (1 < x.Count)
             {
                 var xtmp = new List<StepElem>();
 

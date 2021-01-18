@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blake2Sharp", "external\Blake2Sharp\Blake2Sharp.csproj", "{E21AB364-9130-4F14-ABE1-18FA0C089130}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blake2Sharp", "external\Blake2Sharp\Blake2Sharp.csproj", "{E21AB364-9130-4F14-ABE1-18FA0C089130}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{C260F912-1EC5-49F1-B3D7-2F2285C38629}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beam", "Beam\Beam.csproj", "{58E920E3-4B67-42CF-AA57-D0168D964735}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beam.Reference", "Beam.Reference\Beam.Reference.csproj", "{58E920E3-4B67-42CF-AA57-D0168D964735}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beam.Tests", "Beam.Tests\Beam.Tests.csproj", "{6137F502-74C6-4166-A878-E3E6BC1371B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beam.Reference.Tests", "Beam.Reference.Tests\Beam.Reference.Tests.csproj", "{6137F502-74C6-4166-A878-E3E6BC1371B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

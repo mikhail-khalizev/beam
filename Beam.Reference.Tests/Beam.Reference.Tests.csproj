@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Beam\Beam.csproj" />
+    <ProjectReference Include="..\Beam.Reference\Beam.Reference.csproj" />
   </ItemGroup>
 
 </Project>
